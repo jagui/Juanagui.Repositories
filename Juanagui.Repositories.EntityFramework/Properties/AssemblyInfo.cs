@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Juanagui.Repositories.EntityFramework")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Implementation of the repository pattern for the Entity Framework")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("OVH SAS")]
+[assembly: AssemblyCompany("juanagui.com")]
 [assembly: AssemblyProduct("Juanagui.Repositories.EntityFramework")]
-[assembly: AssemblyCopyright("Copyright © OVH SAS 2011")]
+[assembly: AssemblyCopyright("Copyright © 2011 juanagui.com")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

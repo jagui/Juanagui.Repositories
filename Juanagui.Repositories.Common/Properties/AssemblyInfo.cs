@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Juanagui.Repositories.Common")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("OVH SAS")]
+[assembly: AssemblyCompany("juanagui.com")]
 [assembly: AssemblyProduct("Juanagui.Repositories.Common")]
-[assembly: AssemblyCopyright("Copyright © OVH SAS 2011")]
+[assembly: AssemblyCopyright("Copyright 2011 © juanagui.com")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
