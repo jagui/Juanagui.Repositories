@@ -5,15 +5,18 @@ using System.Text;
 
 namespace Juanagui.Repositories.Common
 {
-    public abstract class Repository<T> : IDisposable
+// ReSharper disable InconsistentNaming
+    public interface Repository<T> : IDisposable
+// ReSharper restore InconsistentNaming
         where T : class
     {
-        public abstract void Dispose();
-        public abstract IQueryable<T> Query();
-        public abstract IEnumerable<T> All();
-        public abstract void Add(T entity);
-        public abstract void Attach(T entity);
-        public abstract void Delete(T entity);
-        public abstract void PersistAll();
+// ReSharper disable ReturnTypeCanBeEnumerable.Global
+        IQueryable<T> Query();
+// ReSharper restore ReturnTypeCanBeEnumerable.Global
+        IEnumerable<T> All();
+        void Add(T entity);
+        void Attach(T entity);
+        void Delete(T entity);
+        void PersistAll();
     }
 }

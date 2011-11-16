@@ -13,7 +13,7 @@ namespace Juanagui.Repositories.EntityFramework
     {
         private readonly DbContext _db;
 
-        protected EntityFrameworkPocoRepository(DbContext dbContext)
+        public EntityFrameworkPocoRepository(DbContext dbContext)
         {
             if (dbContext == null)
             {
@@ -22,32 +22,33 @@ namespace Juanagui.Repositories.EntityFramework
             _db = dbContext;
         }
 
-        public override IQueryable<T> Query()
+        public IQueryable<T> Query()
         {
             return _db.Set<T>();
         }
-        public override IEnumerable<T> All()
+        public IEnumerable<T> All()
         {
             return Query().AsEnumerable();
         }
-        public override void Add(T entity)
+        public void Add(T entity)
         {
             _db.Set<T>().Add(entity);
         }
-        public override void Attach(T entity)
+        public void Attach(T entity)
         {
             _db.Set<T>().Attach(entity);
         }
-        public override void Delete(T entity)
+        public void Delete(T entity)
         {
             _db.Set<T>().Remove(entity);
         }
-        public override void PersistAll()
+        public void PersistAll()
         {
             _db.SaveChanges();
         }
-        public override void Dispose()
+        public void Dispose()
         {
+            PersistAll();
             _db.Dispose();
         }
     }
