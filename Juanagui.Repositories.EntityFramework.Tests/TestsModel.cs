@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Data.Entity;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,18 @@ namespace Juanagui.Repositories.EntityFramework.Tests
         public String FirstName { get; set; }
         public String LastName { get; set; }
         public DateTime DateOfBirth { get; set; }
-        private IEnumerable<Child> Children { get; set; }
+        private ICollection<Child> _children = new Collection<Child>();
+        public virtual ICollection<Child> Children
+        {
+            get { return _children; }
+            set { _children = value; }
+        }
+
+        public void AddChild(Child child)
+        {
+            child.Parents.Add(this);
+            Children.Add(child);
+        }
     }
 
     public class Father : Parent
@@ -30,13 +42,16 @@ namespace Juanagui.Repositories.EntityFramework.Tests
         public String FirstName { get; set; }
         public String LastName { get; set; }
         public DateTime DateOfBirth { get; set; }
-        private IEnumerable<Parent> Parents { get; set; }
+        private ICollection<Parent> _parents = new Collection<Parent>() ;
+        public virtual ICollection<Parent> Parents
+        {
+            get { return _parents; }
+            set { _parents = value; }
+        }
     }
 
     public class TestContext : DbContext
     {
-        private DbSet<Parent> Parents { get; set; }
-
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Parent>().HasKey(p => p.Id);
