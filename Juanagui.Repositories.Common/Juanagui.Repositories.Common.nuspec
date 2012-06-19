@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Juanagui.Repositories.Common</id>
+    <version>1.0.0</version>
+    <authors>juanagui.com</authors>
+    <licenseUrl>https://raw.github.com/jagui/Juanagui.Repositories/master/License.txt</licenseUrl>
+    <projectUrl>https://github.com/jagui/Juanagui.Repositories</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Tired of rewriting your repository interface whenever you start a new project? This package provides a boilerplate repository interface and you can choose to provide your own implementation or use one of the existing Juanagui.Repositories implementations.</description>
+    <releaseNotes>Initial version, only contains the Repository interface</releaseNotes>
+    <copyright>Copyright 2012</copyright>
+    <tags>Repository</tags>
+  </metadata>
+  <files>
+    <file src="..\bin\Juanagui.Repositories.Common.dll" target="lib\net35" />
+  </files>
+</package>

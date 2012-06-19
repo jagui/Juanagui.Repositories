@@ -9,7 +9,7 @@ using System.Data.Entity;
 
 namespace Juanagui.Repositories.EntityFramework
 {
-    public class EntityFrameworkPocoRepository<T> : Repository<T> where T : class
+    public class EntityFrameworkPocoRepository<T> : IRepository<T> where T : class
     {
         private readonly DbContext _db;
 

@@ -1,23 +1,22 @@
 <?xml version="1.0"?>
 <package>
   <metadata>
-    <id>$id$</id>
-    <version>$version$</version>
-    <title>$title$</title>
-    <authors>$author$</authors>
-    <owners>$author$</owners>
+    <id>Juanagui.Repositories.EntityFramework </id>
+    <version>2.0.0</version>
+    <authors>juanagui.com</authors>
     <licenseUrl>https://raw.github.com/jagui/Juanagui.Repositories/master/License.txt</licenseUrl>
     <projectUrl>https://github.com/jagui/Juanagui.Repositories</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>$description$</description>
-    <releaseNotes>Initial Release. Only supports EF code first</releaseNotes>
-    <copyright>Copyright 2011</copyright>
-    <tags>Tag1 Tag2</tags>
+    <description>Entity Framework's Code First implementation of the Juanagui.Common.Repositories package's IRepository interface.</description>
+    <releaseNotes>Major change, renamed and moved Repository interface to IRepository Juanagui.Common.Repositories package</releaseNotes>
+    <copyright>Copyright 2012</copyright>
+    <tags>Repository, EF Code First</tags>
     <dependencies>
-      <dependency id="EntityFramework" version="4.2.0.0" />
+      <dependency id="EntityFramework" version="4.3.1.0" />
+      <dependency id="Juanagui.Repositories.Common" version="1.0.0.0" />
     </dependencies>
   </metadata>
   <files>
-    <file src="bin\Release\Juanagui.Repositories.Common.dll" target="lib\net40" />
+    <file src="..\bin\Juanagui.Repositories.EntityFramework.dll" target="lib\net40" />
   </files>
 </package>

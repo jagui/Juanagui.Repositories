@@ -5,9 +5,7 @@ using System.Text;
 
 namespace Juanagui.Repositories.Common
 {
-// ReSharper disable InconsistentNaming
-    public interface Repository<T> : IDisposable
-// ReSharper restore InconsistentNaming
+    public interface IRepository<T> : IDisposable
         where T : class
     {
 // ReSharper disable ReturnTypeCanBeEnumerable.Global
