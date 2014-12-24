@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Data.Objects;
 using Juanagui.Repositories.Common;
-using System.Data.Metadata.Edm;
 using System.Data.Entity;
 
 namespace Juanagui.Repositories.EntityFramework

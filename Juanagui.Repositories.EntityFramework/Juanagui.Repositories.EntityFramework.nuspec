@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Juanagui.Repositories.EntityFramework </id>
-    <version>2.0.0</version>
+    <version>6.1.2</version>
     <authors>juanagui.com</authors>
     <licenseUrl>https://raw.github.com/jagui/Juanagui.Repositories/master/License.txt</licenseUrl>
     <projectUrl>https://github.com/jagui/Juanagui.Repositories</projectUrl>
@@ -12,7 +12,7 @@
     <copyright>Copyright 2012</copyright>
     <tags>Repository, EF Code First</tags>
     <dependencies>
-      <dependency id="EntityFramework" version="4.3.1.0" />
+      <dependency id="EntityFramework" version="6.1.2" />
       <dependency id="Juanagui.Repositories.Common" version="1.0.0.0" />
     </dependencies>
   </metadata>
